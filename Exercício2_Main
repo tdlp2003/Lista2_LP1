@@ -1,0 +1,17 @@
+import Exercicio1.Animal;
+import Exercicio1.Cachorro;
+import Exercicio1.Cavalo;
+import Exercicio1.Preguiça;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Animal a1 = new Cachorro("lulu",2);
+        Animal a2 = new Preguiça("Keke",5);
+        Animal a3 = new Cavalo("Klkk",3);
+
+        System.out.println(a1.toString());
+        System.out.println(a2.toString());
+        System.out.println(a3.toString());
+    }
+}
