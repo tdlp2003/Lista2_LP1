@@ -1,0 +1,70 @@
+
+import Exercicio1.Animal;
+import Exercicio1.Cachorro;
+import Exercicio1.Cavalo;
+import Exercicio1.Preguiça;
+
+
+public class Zoologico
+{
+    private Animal[] jaulas;
+    private int i, tamanho;
+
+    public Zoologico(int tamanho)
+    {
+        this.jaulas = new Animal[tamanho];
+        this.tamanho = 0;
+    }
+
+    public void addAnimal(Animal animal )
+    {
+        jaulas[tamanho] = animal;
+        tamanho++;
+    }
+
+    public void listarAnimais()
+    {
+        for(i = 0; i < jaulas.length; i++)
+        {
+            if( i == 10)
+                break;
+            else
+                if(jaulas[i] instanceof Preguiça == true)
+                    System.out.println(jaulas[i].getClass() + " -  jaula "+ (i+1) + jaulas[i].emiteSom() + ", " + jaulas[i].sobeEmArvores());
+
+                System.out.println(jaulas[i].getClass() + " - jaula "+ (i+1) + ", " +jaulas[i].emiteSom());
+        }
+    }
+
+
+
+    public static void main(String[] args)
+    {
+        Animal a1 = new Cachorro("Lulu",2);
+        Animal a2 = new Preguiça("Keke",5);
+        Animal a3 = new Cavalo("Bratz",3);
+        Animal a4 = new Cachorro("Lulu",2);
+        Animal a5 = new Preguiça("Keke",5);
+        Animal a6 = new Cavalo("Bratz",3);
+        Animal a7 = new Cachorro("Lulu",2);
+        Animal a8 = new Preguiça("Keke",5);
+        Animal a9 = new Cavalo("Bratz",3);
+        Animal a10 = new Cachorro("Lulu",2);
+        Animal a11 = new Cachorro("Dedé",9);
+        Zoologico z1 = new Zoologico(11);
+
+        z1.addAnimal(a1);
+        z1.addAnimal(a2);
+        z1.addAnimal(a3);
+        z1.addAnimal(a4);
+        z1.addAnimal(a5);
+        z1.addAnimal(a6);
+        z1.addAnimal(a7);
+        z1.addAnimal(a8);
+        z1.addAnimal(a9);
+        z1.addAnimal(a10);
+        z1.addAnimal(a11);
+
+        z1.listarAnimais();
+    }
+}
