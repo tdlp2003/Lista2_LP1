@@ -1,0 +1,26 @@
+import Exercicio1.Animal;
+import Exercicio1.Cachorro;
+import Exercicio1.Cavalo;
+import Exercicio1.Preguiça;
+
+public class Veterinario
+{
+    private Animal animal;
+    public String examinarAnimal(Animal animal)
+    {
+        return animal.getClass()+ " " +animal.emiteSom();
+    }
+    public static void main(String[] args) {
+        Animal a1 = new Cachorro("Lulu",2);
+        Animal a2 = new Preguiça("Keke",5);
+        Animal a3 = new Cavalo("Bratz",3);
+
+        System.out.println(a1.toString());
+        System.out.println("\n" + a2.toString());
+        System.out.println("\n" + a3.toString());
+
+        Veterinario v1 = new Veterinario();
+        System.out.println(v1.examinarAnimal(a1));
+    }
+
+}
